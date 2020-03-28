@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
+import { InMemoryDatabase } from "./in-memory-database";
 import { CategoriesModule } from './pages/categories/categories.module';
 
 @NgModule({
@@ -12,7 +14,8 @@ import { CategoriesModule } from './pages/categories/categories.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CategoriesModule
+    CategoriesModule,
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryDatabase)
   ],
   providers: [],
   bootstrap: [AppComponent]
