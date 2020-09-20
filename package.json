@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "heroku-postbuild": "ng build --prod",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -24,8 +25,10 @@
     "bootstrap": "^4.4.1",
     "chart.js": "^2.9.3",
     "currency-formatter": "^1.5.5",
+    "express": "^4.17.1",
     "jquery": "^3.4.1",
     "moment": "^2.24.0",
+    "path": "^0.12.7",
     "primeicons": "^2.0.0",
     "primeng": "^9.0.2",
     "rxjs": "~6.5.4",
@@ -53,5 +56,9 @@
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~3.8.3"
+  },
+  "engines": {
+    "node": "12.13.0",
+    "npm": "6.12.0"
   }
 }
